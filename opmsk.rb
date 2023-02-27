@@ -11,7 +11,7 @@ class Opmsk < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/winebarrel/opmsk/releases/download/v0.1.0/opmsk_0.1.0_darwin_amd64.tar.gz"
-      sha256 "c2e664187a22a723d987b1412164f87852f484dc8a9f6a2681fa672434560359"
+      sha256 "95a28efefb4cc13613cffb0ddf8a4580d4fb244a5916f1fcc9e96ead441e181f"
 
       def install
         bin.install 'opmsk'
@@ -19,7 +19,7 @@ class Opmsk < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/winebarrel/opmsk/releases/download/v0.1.0/opmsk_0.1.0_darwin_arm64.tar.gz"
-      sha256 "bc92161c314606cf030c7cfdfe1ae2ddde8e9833977a17903df55ed17ef2aa3e"
+      sha256 "d46660e8ae64a361022b8e4c0a4631a7eda20f1529ae3bc0cfc1994dbe22e2f7"
 
       def install
         bin.install 'opmsk'
@@ -30,7 +30,7 @@ class Opmsk < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/winebarrel/opmsk/releases/download/v0.1.0/opmsk_0.1.0_linux_arm64.tar.gz"
-      sha256 "c7ad55db7637ea46b926d281dede3998073dc86a5b0b88138e890157c289617a"
+      sha256 "03dc0c30fb9d0ea0fae423a4f69ee8fe6ba6607b547859ab4349776838b5ebf1"
 
       def install
         bin.install 'opmsk'
@@ -38,7 +38,7 @@ class Opmsk < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/winebarrel/opmsk/releases/download/v0.1.0/opmsk_0.1.0_linux_amd64.tar.gz"
-      sha256 "42330d9307cb0415bb40be20ef0ed0fb823654b52fa77fd4b2a1387228839338"
+      sha256 "1ceda8f3a6da302379e36b5833eed8fb102fb2de1742eda30ad9f452a2386768"
 
       def install
         bin.install 'opmsk'
