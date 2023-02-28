@@ -5,21 +5,21 @@
 class Opmsk < Formula
   desc "Mask 1Password CLI password using ANSI color."
   homepage "https://github.com/winebarrel/opmsk"
-  version "0.3.1"
+  version "0.3.2"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/winebarrel/opmsk/releases/download/v0.3.1/opmsk_0.3.1_darwin_amd64.tar.gz"
-      sha256 "f1bfdb400c1fb9dad4913c64d66ebd81f15208b8ac02b30f547d25cc7eceef8a"
+    if Hardware::CPU.arm?
+      url "https://github.com/winebarrel/opmsk/releases/download/v0.3.2/opmsk_0.3.2_darwin_arm64.tar.gz"
+      sha256 "fd28aa814408eae91c31bb528adceb7b7ac10fe55a95c737cda24d0fb56f598d"
 
       def install
         bin.install 'opmsk'
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/winebarrel/opmsk/releases/download/v0.3.1/opmsk_0.3.1_darwin_arm64.tar.gz"
-      sha256 "4e9388994c4893549af698eb1ccab260bedb263ed889a3c73b0b618a285d1726"
+    if Hardware::CPU.intel?
+      url "https://github.com/winebarrel/opmsk/releases/download/v0.3.2/opmsk_0.3.2_darwin_amd64.tar.gz"
+      sha256 "e3777e2e5e854cdbe24e4c266ca11d8fbe8141117ae7ef2f3b8b684b3a018dd1"
 
       def install
         bin.install 'opmsk'
@@ -28,17 +28,17 @@ class Opmsk < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/winebarrel/opmsk/releases/download/v0.3.1/opmsk_0.3.1_linux_amd64.tar.gz"
-      sha256 "e712c945408921fb01eeb04cc7de90d954cc40dea7a1476067c199f66928b276"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/winebarrel/opmsk/releases/download/v0.3.2/opmsk_0.3.2_linux_arm64.tar.gz"
+      sha256 "51fc077f0e6470620b96936bee3530c7ed2a49e83e0066be62decf3821501ed6"
 
       def install
         bin.install 'opmsk'
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/winebarrel/opmsk/releases/download/v0.3.1/opmsk_0.3.1_linux_arm64.tar.gz"
-      sha256 "3cfcc2f0736e0f8f29e238bc41389d41f44511c276ae5749ac63cfad7247bb9a"
+    if Hardware::CPU.intel?
+      url "https://github.com/winebarrel/opmsk/releases/download/v0.3.2/opmsk_0.3.2_linux_amd64.tar.gz"
+      sha256 "4b5978a42549bd17c74b208bccf17fbf80ab76bdcd0cac1c69319b3b598cc397"
 
       def install
         bin.install 'opmsk'
