@@ -5,21 +5,21 @@
 class Opmsk < Formula
   desc "Mask 1Password CLI password using ANSI color."
   homepage "https://github.com/winebarrel/opmsk"
-  version "0.4.0"
+  version "0.4.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/winebarrel/opmsk/releases/download/v0.4.0/opmsk_0.4.0_darwin_arm64.tar.gz"
-      sha256 "331792d13a1e39120e594cbdbc08905a1b7c28847163143f9e6d72a78b50a8bc"
+      url "https://github.com/winebarrel/opmsk/releases/download/v0.4.1/opmsk_0.4.1_darwin_arm64.tar.gz"
+      sha256 "54eaf8c597e8a8cc951c83894ea24119c194258bbe536419fdde1277860e84fa"
 
       def install
         bin.install 'opmsk'
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/winebarrel/opmsk/releases/download/v0.4.0/opmsk_0.4.0_darwin_amd64.tar.gz"
-      sha256 "940d76f055ef05f499c36e224cea8f1cdfaa9dd18f776d3df76b94936d0d2ec7"
+      url "https://github.com/winebarrel/opmsk/releases/download/v0.4.1/opmsk_0.4.1_darwin_amd64.tar.gz"
+      sha256 "9da28f39915881eef8798fe341e528474eeda16b4e85d38119dd553aa03aa8fb"
 
       def install
         bin.install 'opmsk'
@@ -29,16 +29,16 @@ class Opmsk < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/winebarrel/opmsk/releases/download/v0.4.0/opmsk_0.4.0_linux_arm64.tar.gz"
-      sha256 "1f15913ab8d5674a9bde28d46f4fa6165d47453434f99ee800e1f1e717c3b308"
+      url "https://github.com/winebarrel/opmsk/releases/download/v0.4.1/opmsk_0.4.1_linux_arm64.tar.gz"
+      sha256 "2f66481b15acb328dcc545367e976e38b12466b2c28fd3daef092d331ac1fd98"
 
       def install
         bin.install 'opmsk'
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/winebarrel/opmsk/releases/download/v0.4.0/opmsk_0.4.0_linux_amd64.tar.gz"
-      sha256 "173e9bfee16145aa5511242e6c976f90282084dc4392050f75a41833b1264997"
+      url "https://github.com/winebarrel/opmsk/releases/download/v0.4.1/opmsk_0.4.1_linux_amd64.tar.gz"
+      sha256 "cf2f85352f725ac0896d6c0c28730ebf94c322647583a1ea1cc99fb8bc96dcfc"
 
       def install
         bin.install 'opmsk'
